@@ -8,8 +8,8 @@ class App extends Component {
     super(props);
     this.state = {
       dailyWeather: [],
-      city:'Varazze',
-      country:'IT'
+      city:'London',
+      country:'UK'
     }
     this.handleChange = this.handleChange.bind(this);
     this.handleSubmit = this.handleSubmit.bind(this);
@@ -83,7 +83,7 @@ class App extends Component {
   render() {
     return (
       <div className="app">
-        <h1>5 Days Weather Forecast</h1>
+        <h1>UK Weather Forecast</h1>
         <div>
           <form onSubmit={this.handleSubmit}>
             <h3>Choose city: </h3>
