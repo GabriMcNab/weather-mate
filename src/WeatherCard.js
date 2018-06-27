@@ -53,7 +53,7 @@ class WeatherCard extends Component {
     const minTemp = Math.floor(Math.min(...this.getTemp(weather)));
     const maxTemp = Math.floor(Math.max(...this.getTemp(weather)));
     return (
-      <div className="weather-card">
+      <div className="weather-card" onClick={() => this.props.clickHandler(this.props.id)}>
         <p>{day}</p>
         <div className="weather-card-icon">
           <i className={this.setIcon(averageWeatherId)}></i>
