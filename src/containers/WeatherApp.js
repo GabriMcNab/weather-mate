@@ -37,7 +37,7 @@ class WeatherApp extends Component {
   }
 
   async componentDidMount() {
-    await fetch('http://ip-api.com/json')
+    await fetch('https://ip-api.com/json')
       .then(res => res.json())
       .then(data => {
         this.setState({
