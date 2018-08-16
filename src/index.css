@@ -1,0 +1,41 @@
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+
+html {
+  font-size: 55%;
+}
+
+body {
+  font-size: 1.6rem;
+  font-weight: 300;
+  font-family: 'Roboto Condensed', sans-serif;
+
+  color: #f1f1f1;
+  background-color: #f1f1f1;
+}
+
+::-webkit-scrollbar {
+  -webkit-appearance: none;
+  width: 7px;
+}
+
+::-webkit-scrollbar-thumb {
+  border-radius: 4px;
+  background-color: rgba(0,0,0,.3);
+  -webkit-box-shadow: 0 0 1px rgba(255,255,255,.5);
+}
+
+::-webkit-scrollbar-corner {
+  background-color: transparent;
+}
+
+@media only screen and (min-width: 600px) {
+  html {
+    font-size: 62.5%;
+  }
+}

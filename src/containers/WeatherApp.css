@@ -1,0 +1,52 @@
+.Title {
+  text-align: center;
+  font-family: 'Dancing Script', cursive;
+  font-size: 6rem;
+  text-shadow: 0 1px 3px rgba(0,0,0,0.4);
+  padding-top: 4rem;
+}
+
+.WeatherCurrentContainer {
+  padding: 2rem 3rem;
+  text-align: center;
+  min-height: 60vh;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+@media only screen and (min-width: 600px) {
+  .Title {
+    font-size: 8rem;
+  }
+}
+
+@media only screen and (min-width: 900px) {
+  .Title {
+    font-size: 6rem;
+    flex: 0 0 100%;
+    margin-bottom: 4rem;
+  }
+
+  .WeatherMainContainer {
+    height: 55rem;
+    max-width: 100rem;
+    margin: 0 auto;
+    background-image: linear-gradient(to left, #6a11cb 0%, #2575fc 100%);
+    border-radius: 1rem;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+    overflow: hidden;
+
+    display: flex;
+  }
+
+  .WeatherCurrentContainer {
+    min-height: 0;
+    flex: 1
+  }
+
+  .WeatherForecastContainer {
+    flex: 0 1 50%;
+  }
+}

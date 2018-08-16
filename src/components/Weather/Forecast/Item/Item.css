@@ -1,0 +1,33 @@
+.ForecastItem {
+  background-color: rgba(0,0,0,0.1);
+  padding: 1.5rem 0.5rem;
+  color: #f1f1f1;
+  cursor: pointer;
+  
+  transition: all 0.2s;
+
+  flex: 1;
+}
+
+.ForecastItem:hover {
+  background-color: rgba(0,0,0,0.2);
+}
+
+.ForecastItem p {
+  text-align: center;
+  text-shadow: 0 1px 2px rgba(0,0,0,0.3);
+
+  margin: 0;
+}
+
+.ForecastItem span:not(:last-child) {
+  margin-right: 10%;
+}
+
+.IconContainer {
+  text-align: center;
+}
+
+.Icon {
+  width: 100%;
+}

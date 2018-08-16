@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
-import WeatherApp from './containers/WeatherApp'
-import './weather-icons.min.css';
+import WeatherApp from './containers/WeatherApp';
 
 class App extends Component {
   

@@ -1,0 +1,47 @@
+.HourlyListItem {
+  border-top: 1px solid rgba(0,0,0,0.1);
+  padding: 0.5rem;
+}
+
+.HourlyListItem:not(:last-child) {
+  margin-bottom: -1px;
+}
+
+.TimeBox {
+  text-align: center;
+  font-weight: 400;
+  letter-spacing: 0.2rem;
+  padding: 0.5rem;
+  opacity: 0.8;
+}
+
+.MainContainer {
+  padding: 1rem 0;
+
+  display: flex;
+  justify-content: space-between;
+}
+
+.Container {
+  text-align: center;
+
+  flex: 0 0 23%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.SubContainer {
+
+  display: flex;
+}
+
+.SubContainer:not(:last-child) {
+  margin-bottom: 0.5rem;
+}
+
+.Icon {
+  height: 2.5rem;
+  margin-right: 0.5rem;
+}
