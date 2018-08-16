@@ -6,7 +6,6 @@ import Location from './Location/Location';
 const weatherCurrent = (props) => {
   const currentWeather = props.fullForecast[0][0];
   const avgTemp = Math.floor((currentWeather.maxTemp + currentWeather.minTemp) / 2);
-  console.log(props.city);
 
   return (
     <React.Fragment>
