@@ -46,7 +46,7 @@ class WeatherApp extends Component {
         })
       })
       .catch(err => console.log(err));
-    const url = `http://api.openweathermap.org/data/2.5/forecast?q=${this.state.city},${this.state.country}&units=metric&APPID=0e89f04938f66f1edd11f0e37d43aff2`;
+    const url = `https://api.openweathermap.org/data/2.5/forecast?q=${this.state.city},${this.state.country}&units=metric&APPID=0e89f04938f66f1edd11f0e37d43aff2`;
     fetch(url)
       .then(res => res.json())
       .then(data => {
