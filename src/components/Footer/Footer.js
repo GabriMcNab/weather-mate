@@ -9,7 +9,7 @@ const footer = () => {
       <h3 className={classes.Heading3}>Like this app?</h3>
       <div className={classes.Social}>
         <h4 className={classes.Heading4}>Follow me on</h4>
-        <a href="#" alt="github" className={classes.Link}>
+        <a href="https://github.com/GabriMcNab" alt="github" className={classes.Link}>
           <img src={githubIcon} alt="github" height="20rem" />
         </a>
       </div>
