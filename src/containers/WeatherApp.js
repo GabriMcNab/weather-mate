@@ -11,8 +11,8 @@ class WeatherApp extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      city: '',
-      country: '',
+      city: null,
+      country: null,
       fullForecast: null,     //5-days forecast, weather detail every 3 hours
       fiveDaysForecast: null,  //5-days forecast, day average
       selectedDay: 0,
@@ -46,7 +46,13 @@ class WeatherApp extends Component {
         })
       })
       .catch(err => console.log(err));
-    const url = `https://api.openweathermap.org/data/2.5/forecast?q=${this.state.city},${this.state.country}&units=metric&APPID=0e89f04938f66f1edd11f0e37d43aff2`;
+    let city = 'London';
+    let country = 'UK';
+    if(this.state.city) {
+      city = this.state.city;
+      country = this.state.country;
+    }
+    const url = `https://api.openweathermap.org/data/2.5/forecast?q=${city},${country}&units=metric&APPID=0e89f04938f66f1edd11f0e37d43aff2`;
     fetch(url)
       .then(res => res.json())
       .then(data => {
@@ -66,21 +72,22 @@ class WeatherApp extends Component {
     const dataArr = data.list;
     const fiveDaysArr = [];
     let today = new Date(Date.now()).getDay();
-
+    
     //separate data array between days
     for (let i = 0; i < 5; i++) {
       if (today > 6) { today = today - 7 }
       let dayArr = dataArr.reduce((acc, next) => {
-        let day = new Date(next.dt_txt).getDay();
+        let day = new Date(next.dt * 10 ** 3).getDay();
         if (day === today) {
           acc.push(next);
         }
+        
         return acc;
       }, []);
       fiveDaysArr.push(dayArr);
       today++;
     }
-
+    
     //parse data array to include only desired data
     const finalArr = fiveDaysArr.map(function (arr) {
       return arr.map((obj) => {
